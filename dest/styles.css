@@ -15,6 +15,22 @@ html {
   box-sizing: inherit;
 }
 
+.site-wrapper {
+  border: 1px solid blue;
+}
+
+div#illustrations,
+div#photos {
+  border: 1px solid green;
+  width: 80%;
+}
+
+div.illustration,
+div.photo {
+  border: 1px solid red;
+  background-color: yellow;
+  width: 100%;
+}
 body {
   color: var(--main-text-color);
   font-family: Helvetica, Arial, sans-serif;
@@ -29,8 +45,12 @@ h1, h2, button {
   text-transform: uppercase;
 }
 
+h2 {
+  background-color: blue;
+}
 img {
   max-width: 100%;
+  border: 1px solid black;
 }
 
 a {
@@ -167,7 +187,7 @@ section.gallery {
   margin-right: auto;
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
 
 .gallery img {
@@ -367,6 +387,12 @@ footer {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+  }
+
+  /* Additional info */
+
+  h2, button.contact-form {
+    letter-spacing: normal;
   }
   /* Gallery  */
   .gallery img {
