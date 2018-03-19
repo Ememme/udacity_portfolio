@@ -5,6 +5,16 @@
   --complimentary-text-color: #fff;
 }
 
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: var(--main-text-color);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 28px;
+}
+
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -15,42 +25,12 @@ html {
   box-sizing: inherit;
 }
 
-.site-wrapper {
-  border: 1px solid blue;
-}
-
-div#illustrations,
-div#photos {
-  border: 1px solid green;
-  width: 80%;
-}
-
-div.illustration,
-div.photo {
-  border: 1px solid red;
-  background-color: yellow;
-  width: 100%;
-}
-body {
-  color: var(--main-text-color);
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 28px;
-  margin: 0 auto;
-  padding: 20px;
-  overflow: auto;
-}
-
 h1, h2, button {
   text-transform: uppercase;
 }
 
-h2 {
-  background-color: blue;
-}
 img {
   max-width: 100%;
-  border: 1px solid black;
 }
 
 a {
@@ -140,7 +120,9 @@ header {
 }
 
 .header-logo {
-  width: 35%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-right: 25px;
 }
 
 .header-text {
@@ -169,8 +151,8 @@ h2 {
 
 .author-info {
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-gap: 2%;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 }
 
 .author-description {
@@ -185,13 +167,10 @@ h2 {
 section.gallery {
   margin-left: auto;
   margin-right: auto;
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-}
-
-.gallery img {
   width: 100%;
+  display: grid;
+  grid-gap: 2%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 figcaption {
@@ -268,7 +247,7 @@ input::placeholder {
 
 div.contact-logo {
   background-image: url("../images/logo.jpg");
-  background-size: contain;
+  background-size: cover;
   position: relative;
   width: 40%;
   height: 100%;
@@ -342,6 +321,7 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
+  /* Navigation */
   .flex-nav ul {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -387,21 +367,17 @@ footer {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    font-size: 0.75rem;
   }
-
   /* Additional info */
-
   h2, button.contact-form {
     letter-spacing: normal;
-  }
-  /* Gallery  */
-  .gallery img {
-    max-width: 80%;
   }
   section {
     margin-left: auto;
     margin-right: auto;
   }
+  /*Contact form  */
   div.contact-form {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
@@ -414,7 +390,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 420px) {
   /* Navigation */
   .toggleNav {
     display: block;
@@ -434,12 +410,6 @@ footer {
     -ms-flex: 100%;
     flex: 100%;
   }
-  /*Gallery */
-  .gallery img {
-    max-width: 50%;
-    height: auto;
-    margin: 0;
-  }
   /*Contact*/
   .contact-wrapper {
     -ms-flex-wrap: wrap;
@@ -455,5 +425,4 @@ footer {
   }
 }
 
-/*TO DO
-*/
+/*TO DO*/
